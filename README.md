@@ -194,7 +194,7 @@ module.exports = {
 当然，想要撑满屏幕你可以使用 100%，这里只是举例说明。
 
 ```html
-<img class="image" src="https://www.sunniejs.cn/static/weapp/logo.png" />
+<img class="image" src="https://www.xxx.cn/static/weapp/logo.png" />
 
 <style>
   /* rootValue: 75 */
