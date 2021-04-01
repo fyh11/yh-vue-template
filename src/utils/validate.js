@@ -1,5 +1,10 @@
-/**
- * Created by Sunnie on 19/06/04.
+/*
+ * @Author: your name
+ * @Date: 2020-12-24 09:24:21
+ * @LastEditTime: 2021-04-01 16:15:06
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /yh-vue-template/src/utils/validate.js
  */
 
 /**

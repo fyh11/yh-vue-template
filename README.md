@@ -2,10 +2,6 @@
 
 基于 vue-cli4.0 + webpack 4 + vant ui + sass+ rem 适配方案+axios 封装，构建手机端模板脚手架
 
-掘金: [vue-cli4 vant rem 移动端框架方案](https://juejin.im/post/5cfefc73f265da1bba58f9f7)
-
-[查看 demo](https://sunniejs.cn/vue-h5-template/#/) 建议手机端查看
-
 <p>
   <img src="./static/demo.png" width="320" style="display:inline;">
 </p>
@@ -21,9 +17,11 @@
 
 ```bash
 
-git clone https://github.com/sunniejs/vue-h5-template.git
+git clone https://github.com/fyh11/yh-vue-template.git
+npm i byjkcli -g
+byjkcli create yourprojectName
 
-cd vue-h5-template
+cd yourprojectName
 
 npm install
 
@@ -617,7 +615,7 @@ export function getUserInfo(params) {
 // 请求接口
 import { getUserInfo } from '@/api/user.js'
 
-const params = { user: 'sunnie' }
+const params = { user: 'fyh11' }
 getUserInfo(params)
   .then(() => {})
   .catch(() => {})
