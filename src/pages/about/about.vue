@@ -31,7 +31,7 @@ import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
-      wechat: `${this.$cdn}/wx/640.gif`
+      wechat: `wechat.jpg`
     }
   },
   computed: {
