@@ -16,10 +16,11 @@
 ### 启动项目
 
 ```bash
-
-git clone https://github.com/fyh11/yh-vue-template.git
+【推荐npm方式】
 npm i byjkcli -g
 byjkcli create yourprojectName
+or
+git clone https://github.com/fyh11/yh-vue-template.git
 
 cd yourprojectName
 
