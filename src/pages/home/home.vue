@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-24 09:24:21
- * @LastEditTime: 2021-04-01 15:57:19
- * @LastEditors: your name
+ * @LastEditTime: 2021-08-11 17:14:59
+ * @LastEditors: fyh
  * @Description: In User Settings Edit
  * @FilePath: /yh-vue-template/src/pages/home/home.vue
 -->
@@ -10,10 +10,8 @@
 <template>
   <div class="index-container">
     <div class="warpper">
-      <h1 class="demo-home__title"><img src="https://www.xxx.cn/static/weapp/logo.png" /><span> VUE H5开发模板</span></h1>
-      <h2 class="demo-home__desc">
-        A vue h5 template with Vant UI
-      </h2>
+      <h1 class="demo-home__title"><img src="" /><span> VUE H5开发模板</span></h1>
+      <h2 class="demo-home__desc">A vue h5 template with Vant UI</h2>
     </div>
     <van-cell icon="success" v-for="item in list" :key="item" :title="item" />
   </div>
@@ -47,7 +45,7 @@ export default {
 
   computed: {},
 
-  mounted() { },
+  mounted() {},
 
   methods: {}
 }

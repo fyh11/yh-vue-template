@@ -9,7 +9,7 @@
           项目地址:
           <a href="https://github.com/fyh11/yh-vue-template">https://github.com/fyh11/yh-vue-template</a>
         </div>
-        <div class="item">项目作者: yuting</div>
+        <div class="item">项目作者: fyh</div>
         <div class="item"></div>
         <div class="wechat">
           <img :src="this.wechat" alt="" />
@@ -46,13 +46,13 @@ export default {
       // 请求接口数据，仅作为展示，需要配置src->config下环境文件
       const params = { user: 'fyh11' }
       getUserInfo(params)
-        .then(() => { })
-        .catch(() => { })
+        .then(() => {})
+        .catch(() => {})
     },
     // Action 通过 store.dispatch 方法触发
     doDispatch() {
       this.$store.dispatch('setUserName', '哈哈哈')
-      window.location.href = 'https://github.com/fyh11/yh-vue-template';
+      window.location.href = 'https://github.com/fyh11/yh-vue-template'
     },
     goGithub(index) {
       window.location.href = 'https://github.com/fyh11/yh-vue-template'
@@ -98,7 +98,7 @@ export default {
       .logo {
         width: 120px;
         height: 120px;
-        background: url($cdn+'/weapp/logo.png') center / contain no-repeat;
+        background: url($cdn + '/weapp/logo.png') center / contain no-repeat;
       }
       .wechat {
         width: 200px;

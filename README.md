@@ -6,13 +6,6 @@
   <img src="./static/demo.png" width="320" style="display:inline;">
 </p>
 
-### Node 版本要求
-
-`Vue CLI` 需要 Node.js 8.9 或更高版本 (推荐 8.11.0+)。你可以使用 [nvm](https://github.com/nvm-sh/nvm) 或
-[nvm-windows](https://github.com/coreybutler/nvm-windows) 在同一台电脑中管理多个 Node 版本。
-
-本示例 Node.js 12.14.1
-
 ### 启动项目
 
 ```bash
@@ -138,13 +131,6 @@ console.log(baseApi)
 
 ### <span id="rem">✅ rem 适配方案 </span>
 
-不用担心，项目已经配置好了 `rem` 适配, 下面仅做介绍：
-
-Vant 中的样式默认使用`px`作为单位，如果需要使用`rem`单位，推荐使用以下两个工具:
-
-- [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 是一款 `postcss` 插件，用于将单位转化为 `rem`
-- [lib-flexible](https://github.com/amfe/lib-flexible) 用于设置 `rem` 基准值
-
 ##### PostCSS 配置
 
 下面提供了一份基本的 `postcss` 配置，可以在此配置的基础上根据项目需求进行修改
@@ -163,58 +149,6 @@ module.exports = {
   }
 }
 ```
-
-更多详细信息： [vant](https://youzan.github.io/vant/#/zh-CN/quickstart#jin-jie-yong-fa)
-
-**新手必看，老鸟跳过**
-
-很多小伙伴会问我，适配的问题,因为我们使用的是 Vant UI，所以必须根据 Vant UI 375 的设计规范走，一般我们的设计会将 UI 图上
-传到蓝湖，我们就可以需要的尺寸了。下面就大搞普及一下 rem。
-
-我们知道 `1rem` 等于`html` 根元素设定的 `font-size` 的 `px` 值。Vant UI 设置 `rootValue: 37.5`,你可以看到在 iPhone 6 下
-看到 （`1rem 等于 37.5px`）：
-
-```html
-<html data-dpr="1" style="font-size: 37.5px;"></html>
-```
-
-切换不同的机型，根元素可能会有不同的`font-size`。当你写 css px 样式时，会被程序换算成 `rem` 达到适配。
-
-因为我们用了 Vant 的组件，需要按照 `rootValue: 37.5` 来写样式。
-
-举个例子：设计给了你一张 750px \* 1334px 图片，在 iPhone6 上铺满屏幕,其他机型适配。
-
-- 当`rootValue: 75` , 样式 `width: 750px;height: 1334px;` 图片会撑满 iPhone6 屏幕，这个时候切换其他机型，图片也会跟着撑
-  满。
-- 当`rootValue: 37.5` 的时候，样式 `width: 375px;height: 667px;` 图片会撑满 iPhone6 屏幕。
-
-也就是 iphone 6 下 375px 宽度写 CSS。其他的你就可以根据你设计图，去写对应的样式就可以了。
-
-当然，想要撑满屏幕你可以使用 100%，这里只是举例说明。
-
-```html
-<img class="image" src="https://www.xxx.cn/static/weapp/logo.png" />
-
-<style>
-  /* rootValue: 75 */
-  .image {
-    width: 750px;
-    height: 1334px;
-  }
-  /* rootValue: 37.5 */
-  .image {
-    width: 375px;
-    height: 667px;
-  }
-</style>
-```
-
-[▲ 回顶部](#top)
-
-### <span id="vw">✅ vm 适配方案 </span>
-
-本项目使用的是 rem 的 适配方案，其实无论你使用哪种方案，都不需要你去计算 12px 是多少 rem 或者 vw, 会有专门的工具去帮你做
-。如果你想用 vw，你可以按照下面的方式切换。
 
 #### 1.安装依赖
 
@@ -265,16 +199,6 @@ package.json 删除如下代码
 运行起来，F12 元素 css 就是 vw 单位了
 
 [▲ 回顶部](#top)
-
-### <span id="vant">✅ VantUI 组件按需加载 </span>
-
-项目采
-用[Vant 自动按需引入组件 (推荐)](https://youzan.github.io/vant/#/zh-CN/quickstart#fang-shi-yi.-zi-dong-an-xu-yin-ru-zu-jian-tui-jian)下
-面安装插件介绍：
-
-[babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 是一款 `babel` 插件，它会在编译过程中将
-`import` 的写法自动转换为按需引入的方式
-
 #### 安装插件
 
 ```bash
@@ -387,7 +311,6 @@ module.exports = {
       // 给 scss-loader 传递选项
       scss: {
         // 注入 `sass` 的 `mixin` `variables` 到全局, $cdn可以配置图片cdn
-        // 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
         prependData: `
                 @import "assets/css/mixin.scss";
                 @import "assets/css/variables.scss";
@@ -1121,7 +1044,3 @@ Vscode setting.json 设置
 
 [▲ 回顶部](#top)
 
-# 鸣谢 ​
-
-[vue-cli4-config](https://github.com/staven630/vue-cli4-config)  
-[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
